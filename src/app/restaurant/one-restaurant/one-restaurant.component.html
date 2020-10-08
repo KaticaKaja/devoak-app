@@ -1,0 +1,22 @@
+<div class="modal-dialog" *ngIf="restaurant">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">{{restaurant.name}}</h4>
+        <button type="button" class="close" (click)="passDataToParent()">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body text-center">
+        <img height="250" src="{{restaurant.img}}" alt="{{restaurant.name}}">
+        <p>{{restaurant.desc}}</p>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" (click)="passDataToParent()" class="btn btn-danger">Close</button>
+      </div>
+
+    </div>
+</div>

@@ -1,0 +1,44 @@
+
+li{
+    list-style-type: none;
+    width: 100%;
+}
+li:hover{
+    background-color: #606970;
+}
+li:hover .navLink{
+    color: white;
+}
+.navLink{
+    text-decoration: none;
+    color: #5A6268;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+    z-index: 10;
+}
+#menu{
+    display: inline-block;
+}
+#menu:hover{
+    background: #747f86;
+}
+.dropdown-content{
+    position: absolute;
+    display: none;
+    top: 100%;
+    left:-55px;
+    min-width: 200px;
+    background-color: white;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.item{
+    color: #5A6268;
+    cursor: pointer;
+}
+li:hover .item{
+    color: white;
+}

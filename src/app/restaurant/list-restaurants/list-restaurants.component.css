@@ -1,0 +1,12 @@
+.modal.show{
+    display: block;
+}
+.modal.none{
+    display: none;
+}
+.restaurant{
+    cursor: pointer;
+}
+tbody tr:hover{
+    background-color: #D6D8DB;
+}

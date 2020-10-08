@@ -1,0 +1,34 @@
+<div class="row mt-5">
+    <div class="col-md-8">
+        <div class="row">
+            <form class="form-inline">
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="search" class="sr-only">Search restaurants</label>
+                    <input type="text" class="form-control" id="search" placeholder="Search restaurants">
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Confirm</button>
+            </form>
+            <app-dropdown class="ml-3" [button]="btnName" [list]="sorting"></app-dropdown>
+        </div>  
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Restaurant Name</th>
+            <th scope="col">Restaurant Address</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of restaurants" class="restaurant" (click)="showAndSendRestaurant(item)">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.name}}</td>
+            <td>{{item.address}}</td>
+        </tr>
+        <tr>
+        </tbody>
+    </table>
+</div>
+<div class="modal" id="myModal" [ngClass]="{'show': showModal}">
+    <app-one-restaurant [restaurant]="restaurant" (onCloseModal)="updateShowModal($event)"></app-one-restaurant>
+</div>

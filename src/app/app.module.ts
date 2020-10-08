@@ -1,8 +1,13 @@
+import { PagesRoutingModule } from './pages/pages-routing.module';
+import { CoreModule } from './core/core.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PagesModule } from './pages/pages.module';
+import { RestaurantRoutingModule } from './restaurant/restaurant-routing.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -10,7 +15,12 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CoreModule,
+    PagesModule,
+    PagesRoutingModule,
+    RestaurantRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

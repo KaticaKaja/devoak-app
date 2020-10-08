@@ -1,0 +1,12 @@
+<div class="dropdown">
+    <button class="btn btn-secondary" id="menu" type="button">
+        {{button}} <i class="fa fa-caret-down"></i>
+    </button>
+    <ul class="dropdown-content p-0 py-2 text-center shadow rounded">
+        <div *ngIf="flag;else sorting">
+            <li *ngFor="let item of list"><a class="navLink" routerLink="/{{item | lowercase }}">{{item | titlecase }}</a></li>
+        </div>
+        <ng-template #sorting> <li *ngFor="let item of list"><p class="item m-0 py-1">{{item | titlecase}}</p></li> </ng-template>
+        
+    </ul>
+</div>
