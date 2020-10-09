@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AddRestaurantComponent } from './add-restaurant/add-restaurant.component';
 import { ListRestaurantsComponent } from './list-restaurants/list-restaurants.component';
 import { OneRestaurantComponent } from './one-restaurant/one-restaurant.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -11,7 +12,8 @@ import { OneRestaurantComponent } from './one-restaurant/one-restaurant.componen
   declarations: [AddRestaurantComponent, ListRestaurantsComponent, OneRestaurantComponent],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    FormsModule 
   ],
   exports: [AddRestaurantComponent, ListRestaurantsComponent]
 })

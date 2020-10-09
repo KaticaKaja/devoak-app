@@ -2,42 +2,70 @@
     "restaurants": [
         {
             "id" : 1,
-            "name" : "Restoran 1",
+            "name" : "Burger King",
             "desc" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
             "address" : "Boulevard of Broken Dreams 44b",
             "img": "assets/restaurant.jpg"
         },
         {
             "id" : 2,
-            "name" : "Restoran 2",
+            "name" : "Arby's",
             "desc" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
             "address" : "Boulevard of Broken Dreams 44b",
             "img": "assets/restaurant.jpg"
         },
         {
             "id" : 3,
-            "name" : "Restoran 3",
+            "name" : "Dunkin’ Donuts",
             "desc" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
             "address" : "Boulevard of Broken Dreams 44b",
             "img": "assets/restaurant.jpg"
         },
         {
             "id" : 4,
-            "name" : "Restoran 4",
+            "name" : "KFC",
             "desc" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
             "address" : "Boulevard of Broken Dreams 44b",
             "img": "assets/restaurant.jpg"
         },
         {
             "id" : 5,
-            "name" : "Restoran 5",
+            "name" : "McDonald’s",
             "desc" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
             "address" : "Boulevard of Broken Dreams 44b",
             "img": "assets/restaurant.jpg"
         },
         {
-            "id" : 5,
-            "name" : "Restoran 6",
+            "id" : 6,
+            "name" : "Subway",
+            "desc" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+            "address" : "Boulevard of Broken Dreams 44b",
+            "img": "assets/restaurant.jpg"
+        },
+        {
+            "id" : 7,
+            "name" : "Dunkin’ Donuts",
+            "desc" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+            "address" : "Boulevard of Broken Dreams 44b",
+            "img": "assets/restaurant.jpg"
+        },
+        {
+            "id" : 8,
+            "name" : "KFC-Studentski trg",
+            "desc" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+            "address" : "Boulevard of Broken Dreams 44b",
+            "img": "assets/restaurant.jpg"
+        },
+        {
+            "id" : 9,
+            "name" : "McDonald’s",
+            "desc" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
+            "address" : "Boulevard of Broken Dreams 44b",
+            "img": "assets/restaurant.jpg"
+        },
+        {
+            "id" : 10,
+            "name" : "Subway",
             "desc" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries",
             "address" : "Boulevard of Broken Dreams 44b",
             "img": "assets/restaurant.jpg"

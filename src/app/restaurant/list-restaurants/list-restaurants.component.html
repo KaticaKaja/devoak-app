@@ -1,14 +1,15 @@
 <div class="row mt-5">
-    <div class="col-md-8">
+    <div class="col-md-12">
         <div class="row">
-            <form class="form-inline">
+            <form class="form-inline" ngform>
                 <div class="form-group mx-sm-3 mb-2">
                     <label for="search" class="sr-only">Search restaurants</label>
-                    <input type="text" class="form-control" id="search" placeholder="Search restaurants">
+                    <input [(ngModel)]='searchedInput' type="text" class="form-control" id="search" name="search" placeholder="Search restaurants">
                 </div>
-                <button type="submit" class="btn btn-primary mb-2">Confirm</button>
+                <button type="submit" class="btn btn-primary mb-2" (click)="onClickFilter()">Search</button>
+                <button class="btn btn-secondary ml-2 mb-2" (click)="clearSearch()">Clear</button>
             </form>
-            <app-dropdown class="ml-3" [button]="btnName" [list]="sorting"></app-dropdown>
+            <app-dropdown (sendSort)="receiveSortValue($event)" class="ml-3" [button]="btnName" [list]="sorting"></app-dropdown>
         </div>  
     </div>
     <table class="table">
@@ -20,7 +21,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let item of restaurants" class="restaurant" (click)="showAndSendRestaurant(item)">
+        <tr *ngFor="let item of restaurants|filter:searched:prop|sort:[sortProp,sortDirection]" class="restaurant" (click)="showAndSendRestaurant(item)">
             <th scope="row">{{item.id}}</th>
             <td>{{item.name}}</td>
             <td>{{item.address}}</td>

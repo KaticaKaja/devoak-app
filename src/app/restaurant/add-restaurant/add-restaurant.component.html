@@ -1,1 +1,37 @@
-<p>add-restaurant works!</p>
+<div id="contact">
+    <div class="container wrapper">
+        <div class="text-center p-5">
+            <h1 class="text-uppercase">Add a restaurant</h1>
+        </div>
+        <div class="row pb-5">
+            <div class="col-md-12">
+                <div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="messageAfterSubmit">{{messageAfterSubmit}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="closeAlert()">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+            </div>
+            <div class="col-md-12 formstyle rounded">
+                <form #addrestaurantForm = "ngForm" (ngSubmit)="successMessageAndLocalStorage(addrestaurantForm)">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Restaurant name" pattern="[A-Z][a-z\d\s]{2,}" name="name" ngModel required #name="ngModel">
+                        <small class="form-text text-danger p-2 rounded" *ngIf="(name.touched || name.dirty) && !name.valid">Capital letter first, at least 2 charachters</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="desc">Description</label>
+                        <textarea class="form-control" id="desc" rows="3" name="desc" #desc="ngModel" pattern="[A-Z][a-z\d\s]{5,}" ngModel required></textarea>
+                        <small class="form-text text-danger p-2 rounded" *ngIf="(desc.touched || desc.dirty) && !desc.valid">Capital letter first, at least 5 charachters</small>
+                    </div>
+                    <div class="form-group">
+                    <label for="addr">Address</label>
+                    <input placeholder="Restaurant address here" type="text" class="form-control" id="addr" aria-describedby="emailHelp" name="addr" ngModel #addr="ngModel" required>
+                    </div>
+                    <div class="mb-2 text-center">
+                        <button type="submit" [disabled]="!addrestaurantForm.valid" class="btn btn-light  btnStyle">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

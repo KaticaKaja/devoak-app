@@ -12,7 +12,13 @@ export class ListRestaurantsComponent implements OnInit {
   restaurant:Restaurant;
   restaurants:Restaurant[];
   btnName:string = "Sorting";
-  sorting:any = ["Ascending by name","Descending by name"];
+  sorting:any = [{"name":"Ascending by name","sort":"asc"},{"name":"Descending by name","sort":"desc"}];
+  searchedInput:string = '';
+  searched:string = '';
+  prop:string = 'name';
+
+  sortDirection:string = '';
+  sortProp:string = 'name';
   constructor(private restaurantService: RestaurantService) { }
   // restaurants = [{
   //   "id": 1,
@@ -28,7 +34,7 @@ export class ListRestaurantsComponent implements OnInit {
   //   "body": "sdfgdfgdfgdgdf"
   // }];
   ngOnInit(): void {
-    this.restaurantService.getRestaurants().subscribe(data=> this.restaurants = data);
+    this.restaurantService.getRestaurants().subscribe(data=> {this.restaurants = data;});
   }
 
   showAndSendRestaurant(restaurant){
@@ -41,4 +47,17 @@ export class ListRestaurantsComponent implements OnInit {
     this.showModal = event;
 
   }
+
+  onClickFilter(){
+    this.searched = this.searchedInput;
+  }
+  clearSearch(){
+    this.searched = '';
+    this.searchedInput = '';
+  }
+
+  receiveSortValue(e){
+    this.sortDirection = e;
+  }
+
 }
