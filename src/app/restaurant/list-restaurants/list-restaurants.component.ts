@@ -12,12 +12,12 @@ export class ListRestaurantsComponent implements OnInit {
   restaurant:Restaurant;
   restaurants:Restaurant[];
   btnName:string = "Sorting";
-  sorting:any = [{"name":"Ascending by name","sort":"asc"},{"name":"Descending by name","sort":"desc"}];
+  sorting:any = [{"name":"Descending by id","sort":""},{"name":"Ascending by name","sort":"asc"},{"name":"Descending by name","sort":"desc"}];
   searchedInput:string = '';
   searched:string = '';
   prop:string = 'name';
 
-  sortDirection:string = '';
+  sortDirection:any = '';
   sortProp:string = 'name';
   constructor(private restaurantService: RestaurantService) { }
   // restaurants = [{
@@ -58,6 +58,13 @@ export class ListRestaurantsComponent implements OnInit {
 
   receiveSortValue(e){
     this.sortDirection = e;
+    if(this.sortDirection == ''){
+      this.sortProp = 'id';
+      this.sortDirection = 1;
+    }else{
+      this.sortProp = 'name';
+      this.sortDirection = e;
+    }
   }
 
 }

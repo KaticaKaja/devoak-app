@@ -9,7 +9,7 @@ export class SortPipe implements PipeTransform {
     const sortField = args[0];
     const sortDirection = args[1];
     let multiplier = 1;
-    if(sortDirection == ''){
+    if(sortDirection === ''){
       return value;
     }
     if (sortDirection === 'desc') {
