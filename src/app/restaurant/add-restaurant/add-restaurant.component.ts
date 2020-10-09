@@ -1,3 +1,4 @@
+import { RestaurantService } from './../../core/services/http/restaurant.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
@@ -9,7 +10,7 @@ import { NgForm } from '@angular/forms';
 export class AddRestaurantComponent implements OnInit {
   messageAfterSubmit: string;
 
-  constructor() { }
+  constructor(private restaurantService: RestaurantService) { }
 
   ngOnInit(): void {
   }
@@ -30,6 +31,9 @@ export class AddRestaurantComponent implements OnInit {
       restaurants = [newRestaurant];
     }
     localStorage.setItem('Restaurants', JSON.stringify(restaurants));
+    this.restaurantService.addRestaurant(newRestaurant).subscribe(data=>{
+      console.log(data);
+    });
     addrestaurantForm.reset();
   }
 

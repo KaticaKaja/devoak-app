@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Restaurant } from 'src/app/shared/models/Restaurant';
@@ -15,7 +15,10 @@ export class RestaurantService {
     return this.http.get<Restaurant[]>(url);
   }
 
-  addRestaurant(){
-
+  addRestaurant(formBody):Observable<Restaurant>{
+    const httpHeaders = new HttpHeaders();
+    httpHeaders.append('content-type','application/json');
+      let url = "http://localhost:3000/restaurants";
+      return this.http.post<Restaurant>(url,formBody,{headers:httpHeaders});
   }
 }
