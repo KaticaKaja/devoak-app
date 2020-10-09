@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
 
-### Steps for running the application
+# Steps for running the application
 
 ## Get all dependecies
 `npm install` in the terminal/console
